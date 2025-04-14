@@ -1,0 +1,50 @@
+<?php
+// Procesamiento básico de login (simulado)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST["usuario"] ?? '';
+    $clave = $_POST["clave"] ?? '';
+
+    // Simulación: mostrar valores ingresados (solo con fines de prueba)
+    echo "<h3>Datos recibidos:</h3>";
+    echo "Usuario: " . htmlspecialchars($usuario) . "<br>";
+    echo "Contraseña: " . str_repeat("*", strlen($clave)) . "<br>"; // no mostrar la real
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Login</title>
+
+    <!-- Clarity script (reemplaza YOUR_PROJECT_ID con el tuyo real) -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){ (c[a].q=c[a].q||[]).push(arguments) };
+            t=l.createElement(r); t.async=1; t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        form { width: 300px; margin: auto; }
+        input { width: 100%; padding: 10px; margin: 8px 0; }
+        button { padding: 10px; width: 100%; }
+    </style>
+</head>
+<body>
+
+<h2>Login</h2>
+<form method="POST">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+
+    <label for="clave">Contraseña:</label>
+    <input type="password" id="clave" name="clave" required>
+
+    <button type="submit">Ingresar</button>
+</form>
+
+</body>
+</html>
