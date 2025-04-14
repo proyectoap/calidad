@@ -1,16 +1,3 @@
-<?php
-// Procesamiento básico de login (simulado)
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST["usuario"] ?? '';
-    $clave = $_POST["clave"] ?? '';
-
-    // Simulación: mostrar valores ingresados (solo con fines de prueba)
-    echo "<h3>Datos recibidos:</h3>";
-    echo "Usuario: " . htmlspecialchars($usuario) . "<br>";
-    echo "Contraseña: " . str_repeat("*", strlen($clave)) . "<br>"; // no mostrar la real
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
