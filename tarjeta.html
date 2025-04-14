@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Tarjeta (Clarity Demo)</title>
+
+    <!-- Clarity script (reemplaza YOUR_PROJECT_ID con el tuyo real) -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){ (c[a].q=c[a].q||[]).push(arguments) };
+            t=l.createElement(r); t.async=1; t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+    </script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+        form {
+            width: 350px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #1D5172;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Formulario de Pago</h2>
+<form>
+    <label for="nombre">Nombre en la tarjeta:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="numero">Número de tarjeta:</label>
+    <input type="text" id="numero" name="numero" maxlength="19" required>
+
+    <label for="fecha">Fecha de vencimiento (MM/AA):</label>
+    <input type="text" id="fecha" name="fecha" placeholder="MM/AA" required>
+
+    <label for="cvv">Código de seguridad (CVV):</label>
+    <input type="text" id="cvv" name="cvv" maxlength="4" required>
+
+    <button type="submit">Pagar</button>
+</form>
+
+</body>
+</html>
